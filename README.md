@@ -8,15 +8,16 @@ Used node:test for testing, so both tests and src code are using native TS and i
 
 ## Commands
 
-| code               | description                                                                |
-| ------------------ | -------------------------------------------------------------------------- |
-| `npm install`      | install dependencies                                                       |
-| `nvm use`          | use node version specified in projects .nvmrc file. (NVM needs installing) |
-| `npm run test`     | run node:test library                                                      |
-| `npm run coverage` | runs node test coverage report                                             |
-| `npm run clean`    | clean project using prettier                                               |
-| `npm run validate` | validate code using typescript compiler. Does not generate files           |
-| `npm run build`    | build ES module using typescript compiler                                  |
+| code                   | description                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| `npm install`          | install dependencies                                                            |
+| `nvm use`              | use node version specified in projects .nvmrc file. (NVM needs installing)      |
+| `npm run test`         | run node:test library                                                           |
+| `npm run coverage`     | runs node test coverage report                                                  |
+| `npm run clean`        | clean project using prettier                                                    |
+| `npm run validate`     | validate code using typescript compiler. Does not generate files                |
+| `npm run db -- status` | Print your file list and verify sequence numbers without opening database pools |
+| `npm run db -- 4`      | Run your raw update sequence to point 4                                         |
 
 ## General Instructions
 

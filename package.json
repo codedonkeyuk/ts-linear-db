@@ -20,7 +20,7 @@
     "clean": "npx prettier . --write && npx oxlint --type-aware --fix",
     "validate": "prettier . --check && npx oxlint --type-aware && tsc --noEmit && npx cspell README.md",
     "prebuild": "npx prettier . --check && npx oxlint --type-aware && tsc --noEmit",
-    "build": "tsc -p tsconfig.build.json",
+    "db": "node --experimental-strip-types src/index.ts",
     "test": "node --experimental-strip-types --experimental-test-module-mocks --test \"**/*.test.ts\"",
     "coverage": "node --experimental-strip-types --experimental-test-module-mocks --test --experimental-test-coverage \"**/*.test.ts\"",
     "prepare": "husky"
@@ -33,5 +33,10 @@
     "oxlint-tsgolint": "^7.0.2004",
     "prettier": "3.9.5",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^18.0.9",
+    "knex": "^3.3.0"
   }
 }
