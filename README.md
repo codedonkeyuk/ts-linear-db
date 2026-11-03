@@ -1,4 +1,4 @@
-# ts-lib-template
+# ts-linear-db
 
 Node in 2025 implemented support for TS, no need for transpilers until release. This project runs ts natively, and exports ts via typescript compiler as JS module.
 

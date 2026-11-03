@@ -1,14 +1,14 @@
 {
-  "name": "ts-lib-template",
-  "version": "0.0.3",
-  "description": "A simple ts library for use as a template",
-  "homepage": "https://github.com/codedonkeyuk/ts-lib-template#readme",
+  "name": "ts-linear-db",
+  "version": "0.0.1",
+  "description": "Database project that implements updates following the linear delta pattern.",
+  "homepage": "https://github.com/codedonkeyuk/ts-linear-db#readme",
   "bugs": {
-    "url": "https://github.com/codedonkeyuk/ts-lib-template/issues"
+    "url": "https://github.com/codedonkeyuk/ts-linear-db/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codedonkeyuk/ts-lib-template.git"
+    "url": "git+https://github.com/codedonkeyuk/ts-linear-db.git"
   },
   "license": "MIT",
   "author": "Leigh",
