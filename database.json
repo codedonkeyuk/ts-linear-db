@@ -1,0 +1,15 @@
+{
+  "db": {
+    "client": "better-sqlite3",
+    "connection": {
+      "filename": ":memory:"
+    },
+    "useNullAsDefault": true
+  },
+  "engine": {
+    "scriptsDir": "./scripts",
+    "tableName": "db_version_tracker",
+    "idColumn": "id",
+    "versionColumn": "current_version"
+  }
+}
