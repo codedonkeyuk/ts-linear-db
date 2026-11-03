@@ -1,0 +1,37 @@
+{
+  "name": "ts-lib-template",
+  "version": "0.0.3",
+  "description": "A simple ts library for use as a template",
+  "homepage": "https://github.com/codedonkeyuk/ts-lib-template#readme",
+  "bugs": {
+    "url": "https://github.com/codedonkeyuk/ts-lib-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedonkeyuk/ts-lib-template.git"
+  },
+  "license": "MIT",
+  "author": "Leigh",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "clean": "npx prettier . --write && npx oxlint --type-aware --fix",
+    "validate": "prettier . --check && npx oxlint --type-aware && tsc --noEmit && npx cspell README.md",
+    "prebuild": "npx prettier . --check && npx oxlint --type-aware && tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --experimental-strip-types --experimental-test-module-mocks --test \"**/*.test.ts\"",
+    "coverage": "node --experimental-strip-types --experimental-test-module-mocks --test --experimental-test-coverage \"**/*.test.ts\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "cspell": "^10.0.1",
+    "husky": "^9.1.7",
+    "oxlint": "^1.88.0",
+    "oxlint-tsgolint": "^7.0.2004",
+    "prettier": "3.9.5",
+    "typescript": "^7.0.2"
+  }
+}

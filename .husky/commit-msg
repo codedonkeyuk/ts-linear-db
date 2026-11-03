@@ -1,0 +1,1 @@
+npx cspell lint --no-summary --no-progress "$1"

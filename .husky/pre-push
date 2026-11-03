@@ -1,0 +1,32 @@
+set -e
+
+while read -r local_ref local_sha remote_ref remote_sha
+do
+  # Allow the first push to a new branch
+  if [ "$remote_sha" = "0000000000000000000000000000000000000000" ]; then
+    continue
+  fi
+
+  # Check whether the package.json version line changed
+  if ! git diff --unified=0 "$remote_sha" "$local_sha" -- package.json |
+    grep -qE '^[+-][[:space:]]*"version"[[:space:]]*:'; then
+    echo ""
+    echo "============================================================"
+    echo " PUSH REJECTED"
+    echo "============================================================"
+    echo ""
+    echo " package.json version has not changed."
+    echo ""
+    echo " Update the version before pushing, for example:"
+    echo "   npm version patch"
+    echo ""
+    echo " Then commit the change and push again."
+    echo "============================================================"
+    echo ""
+    exit 1
+  fi
+
+  echo "Package version changed."
+done
+
+exit 0
